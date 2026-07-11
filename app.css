@@ -626,3 +626,311 @@ footer p{
 }
 
 
+
+
+    /*================ PREMIUM ANIMATIONS ================*/
+
+.home-content,
+.home-image,
+.about,
+.skills,
+.projects,
+.certificates,
+.contact{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/*================ GLOW EFFECT ================*/
+
+.home-image{
+    position:relative;
+}
+
+.home-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:470px;
+
+    height:470px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(0,171,240,.35),
+    transparent 70%);
+
+    animation:pulse 3s infinite;
+    z-index:-1;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(.95);
+        opacity:.7;
+    }
+
+    50%{
+        transform:scale(1.05);
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(.95);
+        opacity:.7;
+    }
+
+}
+
+/*================ CARD HOVER ================*/
+
+.project-card,
+.skill-card,
+.info-card,
+.certificate-card{
+
+    cursor:pointer;
+
+    transition:.4s ease;
+
+}
+
+.project-card:hover,
+.skill-card:hover,
+.info-card:hover,
+.certificate-card:hover{
+
+    transform:translateY(-12px) scale(1.02);
+
+}
+
+/*================ BUTTON EFFECT ================*/
+
+.btn,
+.btn2{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn::before,
+.btn2::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:100%;
+
+    left:0;
+
+    top:0;
+
+    background:rgba(255,255,255,.2);
+
+    transition:.5s;
+
+}
+
+.btn:hover::before,
+.btn2:hover::before{
+
+    width:100%;
+
+}
+
+/*================ LOGO EFFECT ================*/
+
+.logo{
+
+    transition:.4s;
+
+}
+
+.logo:hover{
+
+    color:white;
+
+    text-shadow:0 0 20px #00abf0;
+
+}
+
+/*================ NAVBAR EFFECT ================*/
+
+.navbar a{
+
+    position:relative;
+
+}
+
+.navbar a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:0;
+
+    height:2px;
+
+    background:#00abf0;
+
+    transition:.4s;
+
+}
+
+.navbar a:hover::after{
+
+    width:100%;
+
+}
+
+/*================ SECTION TITLE ================*/
+
+.section-title{
+
+    position:relative;
+
+    display:inline-block;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.section-title::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:80px;
+
+    height:4px;
+
+    background:#00abf0;
+
+    bottom:-15px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    border-radius:50px;
+
+}
+
+/*================ IMAGE HOVER ================*/
+
+.home-image img{
+
+    transition:.5s;
+
+}
+
+.home-image img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 60px rgba(0,171,240,.8);
+
+}
+
+/*================ HERO TEXT ================*/
+
+.hero-text{
+
+    max-width:600px;
+
+}
+
+/*================ ICON EFFECT ================*/
+
+.icons a{
+
+    transition:.4s;
+
+}
+
+.icons a:hover{
+
+    transform:translateY(-8px) rotate(360deg);
+
+}
+
+/*================ BACKGROUND ================*/
+
+body{
+
+    background-image:
+    radial-gradient(circle at top left,
+    rgba(0,171,240,.08),
+    transparent 25%),
+
+    radial-gradient(circle at bottom right,
+    rgba(255,255,255,.04),
+    transparent 25%);
+
+}
+
+/*================ SELECTION COLOR ================*/
+
+::selection{
+
+    background:#00abf0;
+
+    color:white;
+
+}
+
+/*================ SMOOTH IMAGE FLOAT ================*/
+
+@keyframes floatSlow{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+.home-image img{
+
+    animation:floatSlow 5s ease-in-out infinite;
+
+}
+
+
