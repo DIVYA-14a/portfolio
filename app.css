@@ -199,3 +199,68 @@ margin-top:20px;
     line-height:1.6;
     font-size:16px;
 }
+
+
+/*==================== ABOUT SECTION ====================*/
+
+.about{
+    min-height:100vh;
+    padding:100px 10%;
+    background:#f5f7fa;
+}
+
+.about .heading{
+    color:#031540;
+}
+
+.about-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    margin-top:50px;
+    flex-wrap:wrap;
+}
+
+.about-left{
+    flex:1;
+}
+
+.about-left h3{
+    font-size:35px;
+    color:#031540;
+    margin-bottom:20px;
+}
+
+.about-left p{
+    font-size:18px;
+    color:#555;
+    line-height:1.8;
+    text-align:justify;
+}
+
+.about-right{
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.info-box{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.info-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,171,240,.3);
+}
+
+.info-box strong{
+    color:#00abf0;
+    font-size:18px;
+}
